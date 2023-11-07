@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:netflix_ui/utils/color_constant/color_constant.dart';
 import 'package:netflix_ui/utils/image_constant/image_constant.dart';
@@ -23,81 +24,85 @@ class HomeScreen extends StatelessWidget {
           children: [
             Stack(
               children: [
-                Container(
-                  height: 415,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage(ImageConstant.HomeImage),
-                        fit: BoxFit.cover),
-                  ),
-                  child: SafeArea(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                CarouselSlider(
+                  items: [
+                    Container(
+                      height: 415,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(ImageConstant.HomeImage),
+                            fit: BoxFit.cover),
+                      ),
+                    ),
+                  ],
+                  options: CarouselOptions(
+                      enlargeCenterPage: true,
+                      scrollDirection: Axis.horizontal,
+                      viewportFraction: .7),
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
                       children: [
-                        Row(
-                          children: [
-                            SizedBox(
-                              width: 53,
-                              height: 57,
-                              child: Image.asset(ImageConstant.Netflixlogo),
-                            ),
-                            Expanded(
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  GestureDetector(
-                                    onTap: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) => TvShows(),
-                                          ));
-                                    },
-                                    child: Text(
-                                      "TV Shows",
-                                      style: toptab,
-                                    ),
-                                  ),
-                                  GestureDetector(
-                                    onTap: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) => MyMovies(),
-                                          ));
-                                    },
-                                    child: Text(
-                                      "Movies",
-                                      style: toptab,
-                                    ),
-                                  ),
-                                  GestureDetector(
-                                    onTap: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                MyListScreen(),
-                                          ));
-                                    },
-                                    child: Text(
-                                      "MyList",
-                                      style: toptab,
-                                    ),
-                                  ),
-                                ],
+                        SizedBox(
+                          width: 53,
+                          height: 57,
+                          child: Image.asset(ImageConstant.Netflixlogo),
+                        ),
+                        Expanded(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => TvShows(),
+                                      ));
+                                },
+                                child: Text(
+                                  "TV Shows",
+                                  style: toptab,
+                                ),
                               ),
-                            )
-                          ],
-                        ),
-                        Text(
-                          "#2 in Nigeria Today",
-                          style: TextStyle(color: ColorConstant.PrimaryWhite),
-                        ),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => MyMovies(),
+                                      ));
+                                },
+                                child: Text(
+                                  "Movies",
+                                  style: toptab,
+                                ),
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => MyListScreen(),
+                                      ));
+                                },
+                                child: Text(
+                                  "MyList",
+                                  style: toptab,
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
                       ],
                     ),
-                  ),
+                    Text(
+                      "#2 in Nigeria Today",
+                      style: TextStyle(color: ColorConstant.PrimaryWhite),
+                    ),
+                  ],
                 ),
               ],
             ),
