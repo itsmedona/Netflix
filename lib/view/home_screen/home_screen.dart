@@ -36,9 +36,11 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                   options: CarouselOptions(
-                      enlargeCenterPage: true,
-                      scrollDirection: Axis.horizontal,
-                      viewportFraction: .7),
+                    enlargeCenterPage: true,
+                    scrollDirection: Axis.horizontal,
+                    viewportFraction: .7,
+                    autoPlay: true,
+                  ),
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
