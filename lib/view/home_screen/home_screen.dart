@@ -26,10 +26,10 @@ class HomeScreen extends StatelessWidget {
                 Container(
                   height: 415,
                   decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage(ImageConstant.HomeImage),
-                          fit: BoxFit.cover),
-                          ),
+                    image: DecorationImage(
+                        image: AssetImage(ImageConstant.HomeImage),
+                        fit: BoxFit.cover),
+                  ),
                   child: SafeArea(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -77,7 +77,8 @@ class HomeScreen extends StatelessWidget {
                                       Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (context) => MyListScreen(),
+                                            builder: (context) =>
+                                                MyListScreen(),
                                           ));
                                     },
                                     child: Text(
@@ -151,7 +152,7 @@ class HomeScreen extends StatelessWidget {
                                 "Play",
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.w600),
-                              ), 
+                              ),
                             )
                           ],
                         ),
