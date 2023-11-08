@@ -24,90 +24,96 @@ class HomeScreen extends StatelessWidget {
           children: [
             Stack(
               children: [
-                CarouselSlider(
-                  items: [
-                    Container(
-                      height: 415,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage(ImageConstant.HomeImage),
-                            fit: BoxFit.cover),
-                      ),
-                    ),
-                  ],
-                  options: CarouselOptions(
-                    enlargeCenterPage: true,
-                    scrollDirection: Axis.horizontal,
-                    viewportFraction: .7,
-                    autoPlay: true,
-                  ),
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        SizedBox(
-                          width: 53,
-                          height: 57,
-                          child: Image.asset(ImageConstant.Netflixlogo),
+                CarouselSlider.builder(
+                    itemCount: 1,
+                    itemBuilder: (context, index, realIndex) => Container(
+                          child: Image.asset(ImageConstant.HomeImage),
                         ),
-                        Expanded(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => TvShows(),
-                                      ));
-                                },
-                                child: Text(
-                                  "TV Shows",
-                                  style: toptab,
-                                ),
+                    options: CarouselOptions(
+                        height: 415, autoPlay: true, viewportFraction: 1)),
+
+                Container(
+                  height: 415,
+                  child: SafeArea(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            SizedBox(
+                              width: 53,
+                              height: 57,
+                              child: Image.asset(ImageConstant.Netflixlogo),
+                            ),
+                            Expanded(
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) => TvShows(),
+                                          ));
+                                    },
+                                    child: Positioned(
+                                      child: Text(
+                                        "TV Shows",
+                                        style:
+                                            toptab, //instead of down lines,v can use 1 term for all
+                                        // style: TextStyle(fontSize: 17,color: ColorConstant.PrimaryWhite),
+                                      ),
+                                    ),
+                                  ),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) => MyMovies(),
+                                          ));
+                                    },
+                                    child: Text(
+                                      "Movies",
+                                      style: toptab,
+                                    ),
+                                  ),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                MyListScreen(),
+                                          ));
+                                    },
+                                    child: Text(
+                                      "MyList",
+                                      style: toptab,
+
+                                    ),
+                                  ),
+                                ],
                               ),
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => MyMovies(),
-                                      ));
-                                },
-                                child: Text(
-                                  "Movies",
-                                  style: toptab,
-                                ),
-                              ),
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => MyListScreen(),
-                                      ));
-                                },
-                                child: Text(
-                                  "MyList",
-                                  style: toptab,
-                                ),
-                              ),
-                            ],
-                          ),
-                        )
+                            )
+                          ],
+                        ),
+                        Text(
+                          "#2 in Nigeria Today",
+                          style: TextStyle(color: ColorConstant.PrimaryWhite),
+                        ),
                       ],
                     ),
-                    Text(
-                      "#2 in Nigeria Today",
-                      style: TextStyle(color: ColorConstant.PrimaryWhite),
-                    ),
-                  ],
+                  ),
                 ),
+
+                
               ],
             ),
+            //SizedBox(height: 15,),
+
             SizedBox(
               height: 15,
             ),
@@ -121,11 +127,18 @@ class HomeScreen extends StatelessWidget {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
+                        //    IconButton(icon:Image.asset(ImageConstant.Plus) ,
+                        //   onPressed: () {
+                        //    Navigator.push(context,MaterialPageRoute(builder: (context) => SearchScreen(),) );
+                        //   },
+                        // ),  //for navigating to search screen but error
+
                         SizedBox(
                           height: 24,
                           width: 24,
                           child: Image.asset(ImageConstant.Plus),
                         ),
+
                         Text(
                           "MyList",
                           style: TextStyle(
@@ -135,10 +148,17 @@ class HomeScreen extends StatelessWidget {
                         )
                       ],
                     ),
+                    // GestureDetector(
+                    //   onTap: () {
+                    //    Navigator.push(context,MaterialPageRoute(builder: (context) => SearchScreen(),) );
+                    //   },
+                    // ),
+
                     Container(
                       height: 45,
                       width: 111,
                       decoration: BoxDecoration(
+                          //EDITED AFTER COMING BACK TO HOSTEL 191023
                           borderRadius: BorderRadius.circular(5.625),
                           color: ColorConstant.PrimaryWhite),
                       child: SizedBox(
@@ -159,7 +179,7 @@ class HomeScreen extends StatelessWidget {
                                 "Play",
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.w600),
-                              ),
+                              ), //EDITED AFTER COMING BACK TO HOSTEL 191023
                             )
                           ],
                         ),
@@ -186,6 +206,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
+
             MyMoviesListBuilder(
               title: "Previews",
               shape: BoxShape.circle,
@@ -211,8 +232,207 @@ class HomeScreen extends StatelessWidget {
               shape: BoxShape.rectangle,
               ImageList: ImageList.Top10Nigeria,
             ),
+
+            //  ElevatedButton(onPressed: (){
+            //   Navigator.push(context, MaterialPageRoute(builder: (context) => SearchScreen(),));
+            //  }, child: Text("Press Here"))
           ],
         ),
+
+        // child: Column(
+        //   crossAxisAlignment: CrossAxisAlignment.start,
+        //   children: [
+        //     Stack(
+        //       children: [
+        //         CarouselSlider(
+        //           items: [
+        //             Container(
+        //               height: 415,
+        //               decoration: BoxDecoration(
+        //                 image: DecorationImage(
+        //                     image: AssetImage(ImageConstant.HomeImage),
+        //                     fit: BoxFit.cover),
+        //               ),
+        //             ),
+        //           ],
+        //           options: CarouselOptions(
+        //             enlargeCenterPage: true,
+        //             scrollDirection: Axis.horizontal,
+        //             viewportFraction: .7,
+        //             autoPlay: true,
+        //           ),
+        //         ),
+        //         Column(
+        //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //           children: [
+        //             Row(
+        //               children: [
+        //                 SizedBox(
+        //                   width: 53,
+        //                   height: 57,
+        //                   child: Image.asset(ImageConstant.Netflixlogo),
+        //                 ),
+        //                 Expanded(
+        //                   child: Row(
+        //                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        //                     children: [
+        //                       GestureDetector(
+        //                         onTap: () {
+        //                           Navigator.push(
+        //                               context,
+        //                               MaterialPageRoute(
+        //                                 builder: (context) => TvShows(),
+        //                               ));
+        //                         },
+        //                         child: Text(
+        //                           "TV Shows",
+        //                           style: toptab,
+        //                         ),
+        //                       ),
+        //                       GestureDetector(
+        //                         onTap: () {
+        //                           Navigator.push(
+        //                               context,
+        //                               MaterialPageRoute(
+        //                                 builder: (context) => MyMovies(),
+        //                               ));
+        //                         },
+        //                         child: Text(
+        //                           "Movies",
+        //                           style: toptab,
+        //                         ),
+        //                       ),
+        //                       GestureDetector(
+        //                         onTap: () {
+        //                           Navigator.push(
+        //                               context,
+        //                               MaterialPageRoute(
+        //                                 builder: (context) => MyListScreen(),
+        //                               ));
+        //                         },
+        //                         child: Text(
+        //                           "MyList",
+        //                           style: toptab,
+        //                         ),
+        //                       ),
+        //                     ],
+        //                   ),
+        //                 )
+        //               ],
+        //             ),
+        //             Text(
+        //               "#2 in Nigeria Today",
+        //               style: TextStyle(color: ColorConstant.PrimaryWhite),
+        //             ),
+        //           ],
+        //         ),
+        //       ],
+        //     ),
+        //     SizedBox(
+        //       height: 15,
+        //     ),
+        //     Center(
+        //       child: SizedBox(
+        //         width: 249,
+        //         height: 45,
+        //         child: Row(
+        //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //           children: [
+        //             Column(
+        //               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        //               children: [
+        //                 SizedBox(
+        //                   height: 24,
+        //                   width: 24,
+        //                   child: Image.asset(ImageConstant.Plus),
+        //                 ),
+        //                 Text(
+        //                   "MyList",
+        //                   style: TextStyle(
+        //                       fontSize: 13,
+        //                       fontWeight: FontWeight.w400,
+        //                       color: ColorConstant.PrimaryWhite),
+        //                 )
+        //               ],
+        //             ),
+        //             Container(
+        //               height: 45,
+        //               width: 111,
+        //               decoration: BoxDecoration(
+        //                   borderRadius: BorderRadius.circular(5.625),
+        //                   color: ColorConstant.PrimaryWhite),
+        //               child: SizedBox(
+        //                 width: 72,
+        //                 height: 30,
+        //                 child: Row(
+        //                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        //                   children: [
+        //                     SizedBox(
+        //                       width: 18,
+        //                       height: 22,
+        //                       child: Image.asset(ImageConstant.Play),
+        //                     ),
+        //                     SizedBox(
+        //                       // width: 39,
+        //                       //  height: 30,
+        //                       child: Text(
+        //                         "Play",
+        //                         style: TextStyle(
+        //                             fontSize: 20, fontWeight: FontWeight.w600),
+        //                       ),
+        //                     )
+        //                   ],
+        //                 ),
+        //               ),
+        //             ),
+        //             Column(
+        //               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        //               children: [
+        //                 SizedBox(
+        //                   height: 24,
+        //                   width: 24,
+        //                   child: Image.asset(ImageConstant.Report),
+        //                 ),
+        //                 Text(
+        //                   "Info",
+        //                   style: TextStyle(
+        //                       color: ColorConstant.PrimaryWhite,
+        //                       fontSize: 13,
+        //                       fontWeight: FontWeight.w400),
+        //                 )
+        //               ],
+        //             ),
+        //           ],
+        //         ),
+        //       ),
+        //     ),
+        //     MyMoviesListBuilder(
+        //       title: "Previews",
+        //       shape: BoxShape.circle,
+        //       ImageList: ImageList.Prev,
+        //     ),
+        //     MyMoviesListBuilder(
+        //       title: "Continue watching Shows",
+        //       shape: BoxShape.rectangle,
+        //       ImageList: ImageList.Contnue,
+        //     ),
+        //     MyMoviesListBuilder(
+        //       title: "Popular Shows",
+        //       shape: BoxShape.rectangle,
+        //       ImageList: ImageList.Popular,
+        //     ),
+        //     MyMoviesListBuilder(
+        //       title: "Trending Now",
+        //       shape: BoxShape.rectangle,
+        //       ImageList: ImageList.Trending,
+        //     ),
+        //     MyMoviesListBuilder(
+        //       title: "Top10 Nigeria",
+        //       shape: BoxShape.rectangle,
+        //       ImageList: ImageList.Top10Nigeria,
+        //     ),
+        //   ],
+        // ),
       ),
     );
   }
