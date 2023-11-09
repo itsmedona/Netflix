@@ -103,7 +103,6 @@ class _MyMoviesState extends State<MyMovies> {
                           width: 24,
                           child: Image.asset(ImageConstant.Plus),
                         ),
-
                         Text(
                           "MyList",
                           style: TextStyle(
@@ -174,7 +173,7 @@ class _MyMoviesState extends State<MyMovies> {
             MyMoviesListBuilder(
               title: "Continue watching Shows",
               shape: BoxShape.rectangle,
-              ImageList: ImageList.Contnue,
+              ImageList: ImageList.Continue,
             ),
             MyMoviesListBuilder(
               title: "Popular Shows",

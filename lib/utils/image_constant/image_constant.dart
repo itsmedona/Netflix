@@ -34,7 +34,7 @@ class ImageList {
     "assets/images/ellipse4.png",
   ];
 
-  static List<String> Contnue = [
+  static List<String> Continue = [
     "assets/images/Rectangle 11.png",
     "assets/images/Rectangle 12.png",
     "assets/images/Rectangle 13.png",
@@ -100,6 +100,5 @@ class MyListImages {
     "assets/images/Rectangle 16 (5).png",
     "assets/images/Rectangle 15 (5).png",
     "assets/images/Rectangle 14 (5).png",
-
   ];
 }

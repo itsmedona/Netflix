@@ -70,7 +70,8 @@ class TvShows extends StatelessWidget {
                       gradient: LinearGradient(colors: [
                     ColorConstant.PrimaryBlack.withOpacity(.4),
                     ColorConstant.PrimaryBlack.withOpacity(.1)
-                  ])),
+                  ]),
+                  ),
                 ),
               ],
             ),
@@ -163,7 +164,7 @@ class TvShows extends StatelessWidget {
             MyMoviesListBuilder(
               title: "Continue watching Shows",
               shape: BoxShape.rectangle,
-              ImageList: ImageList.Contnue,
+              ImageList: ImageList.Continue,
             ),
             MyMoviesListBuilder(
               title: "Popular Shows",

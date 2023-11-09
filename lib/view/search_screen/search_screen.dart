@@ -78,27 +78,29 @@ class SearchScreen extends StatelessWidget {
                                     child: Image.asset(TopSearches
                                         .topSearcheslist[index]["path"]),
                                   ),
-                                  Padding(
-                                    padding: EdgeInsets.only(left: 19),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Text(
-                                          TopSearches.topSearcheslist[index]
-                                              ["name"],
-                                          style: TextStyle(
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.w400,
-                                              color: Colors.white),
-                                        ),
-                                        SizedBox(
-                                          width: 80,
-                                        ),
-                                        Image.asset(
-                                          Search.CircularPlayButton,
-                                        ) //for play button to all
-                                      ],
+                                  Expanded(
+                                    child: Padding(
+                                      padding: EdgeInsets.only(left: 19),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            TopSearches.topSearcheslist[index]
+                                                ["name"],
+                                            style: TextStyle(
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w400,
+                                                color: Colors.white),
+                                          ),
+                                          SizedBox(
+                                            width: 80,
+                                          ),
+                                          Image.asset(
+                                            Search.CircularPlayButton,
+                                          ) //for play button to all
+                                        ],
+                                      ),
                                     ),
                                   )
                                 ],

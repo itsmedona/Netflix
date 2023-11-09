@@ -198,7 +198,7 @@ class HomeScreen extends StatelessWidget {
             MyMoviesListBuilder(
               title: "Continue watching Shows",
               shape: BoxShape.rectangle,
-              ImageList: ImageList.Contnue,
+              ImageList: ImageList.Continue,
             ),
             MyMoviesListBuilder(
               title: "Popular Shows",
