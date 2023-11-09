@@ -112,8 +112,6 @@ class HomeScreen extends StatelessWidget {
                 
               ],
             ),
-            //SizedBox(height: 15,),
-
             SizedBox(
               height: 15,
             ),
@@ -127,12 +125,6 @@ class HomeScreen extends StatelessWidget {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        //    IconButton(icon:Image.asset(ImageConstant.Plus) ,
-                        //   onPressed: () {
-                        //    Navigator.push(context,MaterialPageRoute(builder: (context) => SearchScreen(),) );
-                        //   },
-                        // ),  //for navigating to search screen but error
-
                         SizedBox(
                           height: 24,
                           width: 24,
@@ -148,17 +140,10 @@ class HomeScreen extends StatelessWidget {
                         )
                       ],
                     ),
-                    // GestureDetector(
-                    //   onTap: () {
-                    //    Navigator.push(context,MaterialPageRoute(builder: (context) => SearchScreen(),) );
-                    //   },
-                    // ),
-
                     Container(
                       height: 45,
                       width: 111,
                       decoration: BoxDecoration(
-                          //EDITED AFTER COMING BACK TO HOSTEL 191023
                           borderRadius: BorderRadius.circular(5.625),
                           color: ColorConstant.PrimaryWhite),
                       child: SizedBox(
@@ -173,13 +158,11 @@ class HomeScreen extends StatelessWidget {
                               child: Image.asset(ImageConstant.Play),
                             ),
                             SizedBox(
-                              // width: 39,
-                              //  height: 30,
                               child: Text(
                                 "Play",
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.w600),
-                              ), //EDITED AFTER COMING BACK TO HOSTEL 191023
+                              ), 
                             )
                           ],
                         ),
