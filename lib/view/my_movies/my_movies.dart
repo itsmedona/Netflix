@@ -35,7 +35,8 @@ class _MyMoviesState extends State<MyMovies> {
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage(ImageConstant.HomeImage),
-                          fit: BoxFit.cover)),
+                          fit: BoxFit.cover),
+                          ),
                   child: SafeArea(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -83,8 +84,6 @@ class _MyMoviesState extends State<MyMovies> {
                 ),
               ],
             ),
-            //SizedBox(height: 15,),
-
             SizedBox(
               height: 15,
             ),
@@ -116,7 +115,6 @@ class _MyMoviesState extends State<MyMovies> {
                       height: 45,
                       width: 111,
                       decoration: BoxDecoration(
-                          //EDITED AFTER COMING BACK TO HOSTEL 191023
                           borderRadius: BorderRadius.circular(5.625),
                           color: ColorConstant.PrimaryWhite),
                       child: SizedBox(
@@ -137,7 +135,7 @@ class _MyMoviesState extends State<MyMovies> {
                                 "Play",
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.w600),
-                              ), //EDITED AFTER COMING BACK TO HOSTEL 191023
+                              ), 
                             )
                           ],
                         ),

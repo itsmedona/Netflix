@@ -61,8 +61,7 @@ class ImageList {
 }
 
 class Search {
-  static String SearchScreenIcon =
-      ("assets/images/ant-design_search-outlined.png");
+  static String SearchScreenIcon =("assets/images/ant-design_search-outlined.png");
   static String SearchScreenMic = ("assets/images/ic_baseline-mic.png");
   static String CircularPlayButton = ("assets/images/bx_bx-play-circle.png");
 }
@@ -74,10 +73,7 @@ class TopSearches {
     {"path": "assets/images/Rectangle 22.png", "name": "Oloture"},
     {"path": "assets/images/Rectangle 21 (1).png", "name": "The Setup"},
     {"path": "assets/images/Rectangle 22 (1).png", "name": "Breaking Bad"},
-    {
-      "path": "assets/images/Rectangle 21 (2).png",
-      "name": "Ozark",
-    },
+    {"path": "assets/images/Rectangle 21 (2).png","name": "Ozark"},
     {"path": "assets/images/Rectangle 22 (2).png", "name": "The Governor"},
     {"path": "assets/images/Rectangle 21 (3).png", "name": "Your Excellency"},
   ];

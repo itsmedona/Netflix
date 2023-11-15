@@ -9,7 +9,6 @@ class MySplash extends StatefulWidget {
   @override
   State<MySplash> createState() => _MySplashState();
 }
-
 class _MySplashState extends State<MySplash> {
   @override
   void initState() {

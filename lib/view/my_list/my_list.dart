@@ -34,6 +34,8 @@ class MyListScreen extends StatelessWidget {
                           fit: BoxFit.cover),
                     ),
                   ),
-                )));
+                ),
+                ),
+                );
   }
 }
