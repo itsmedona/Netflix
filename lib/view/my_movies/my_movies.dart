@@ -33,8 +33,7 @@ class _MyMoviesState extends State<MyMovies> {
                 Container(
                   height: 415,
                   decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage(ImageConstant.HomeImage),
+                      image: DecorationImage(image: AssetImage(ImageConstant.Popular1),
                           fit: BoxFit.cover),
                           ),
                   child: SafeArea(

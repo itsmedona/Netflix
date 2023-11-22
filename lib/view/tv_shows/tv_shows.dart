@@ -25,7 +25,7 @@ class TvShows extends StatelessWidget {
                   height: 415,
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage(ImageConstant.HomeImage),
+                          image: AssetImage(ImageConstant.Popular2),
                           fit: BoxFit.cover)),
                   child: SafeArea(
                     child: Column(
@@ -67,10 +67,10 @@ class TvShows extends StatelessWidget {
                 Container(
                   height: 415,
                   decoration: BoxDecoration(
-                      gradient: LinearGradient(colors: [
-                    ColorConstant.PrimaryBlack.withOpacity(.4),
-                    ColorConstant.PrimaryBlack.withOpacity(.1)
-                  ]),
+                    gradient: LinearGradient(colors: [
+                      ColorConstant.PrimaryBlack.withOpacity(.4),
+                      ColorConstant.PrimaryBlack.withOpacity(.1)
+                    ]),
                   ),
                 ),
               ],
