@@ -186,8 +186,9 @@ class MoreScreen extends StatelessWidget {
                         ),
                       ),
                       //SizedBox(width: 5,child: VerticalDivider(color: Colors.white,thickness: 10,),),
-
-                      // SizedBox(width: 5,),
+                      SizedBox(
+                        width: 5,
+                      ),
                       // VerticalDivider(color: Colors.white,width: 1,),
                       SizedBox(
                         width: 70,
