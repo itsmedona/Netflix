@@ -36,10 +36,8 @@ class _NavScreenState extends State<NavScreen> {
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
             BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.playlist_add), label: "ComingSoon"),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.download_sharp), label: "DOwnload"),
+            BottomNavigationBarItem(icon: Icon(Icons.playlist_add), label: "ComingSoon"),
+            BottomNavigationBarItem(icon: Icon(Icons.download_sharp), label: "DOwnload"),
             BottomNavigationBarItem(icon: Icon(Icons.menu), label: "More"),
           ]),
     );
